@@ -48,7 +48,7 @@ configure: $(UNZIP_DIR)/CMakeLists.txt
 	@cd pod-build && cmake -DCMAKE_INSTALL_PREFIX=$(BUILD_PREFIX) \
 		   -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) ../$(UNZIP_DIR)
 
-	@cp $(BUILD_TYPE)/lib/pkgconfig/eigen3.pc $(BUILD_TYPE)/lib/pkgconfig/eigen-3.1.0.pc
+	@cp pod-build/eigen3.pc $(BUILD_TYPE)/lib/pkgconfig/eigen-3.1.0.pc
 
 $(UNZIP_DIR)/CMakeLists.txt:
 	wget $(DL_LINK) && tar -xzf $(DL_NAME) && rm $(DL_NAME)
